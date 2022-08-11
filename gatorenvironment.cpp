@@ -56,10 +56,10 @@ namespace gatorEnvironment {
 				value = gatorEnvironmentCombo->getCO2();
 				break;
 			case 6:
-				Serial.writeLine("Enter 6");
+				serial.writeLine("Enter 6");
 				if (gatorEnvironmentCombo->dataAvailable())
 				{
-					Serial.writeLine("6: Data Available");
+					serial.writeLine("6: Data Available");
 					gatorEnvironmentCombo->readAlgorithmResults();
 				}
 				value = gatorEnvironmentCombo->getTVOC();
