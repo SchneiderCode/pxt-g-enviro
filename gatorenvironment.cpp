@@ -61,10 +61,10 @@ namespace gatorEnvironment {
 				value = gatorEnvironmentCombo->getCO2();
 				break;
 			case 6:
-				uBit.serial.send("Enter 6", 7);
+				uBit.serial.send("Enter 6");
 				if (gatorEnvironmentCombo->dataAvailable())
 				{
-					uBit.serial.send("6 DataA", 7);
+					uBit.serial.send("6 DataA");
 					gatorEnvironmentCombo->readAlgorithmResults();
 				}
 				value = gatorEnvironmentCombo->getTVOC();
