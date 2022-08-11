@@ -18,6 +18,11 @@
 #include <cstdint>
 #include "SparkFunEnvironment.h"
 
+#ifndef __MICROBIT_H_
+#define __MICROBIT_H_
+#include "MicroBit.h"
+#endif
+
 using namespace pxt;
 
 namespace gatorEnvironment {
@@ -56,10 +61,10 @@ namespace gatorEnvironment {
 				value = gatorEnvironmentCombo->getCO2();
 				break;
 			case 6:
-				serial.writeLine("Enter 6");
+				uBit.serial.send("Enter 6", 7);
 				if (gatorEnvironmentCombo->dataAvailable())
 				{
-					serial.writeLine("6: Data Available");
+					uBit.serial.send("6 DataA", 7);
 					gatorEnvironmentCombo->readAlgorithmResults();
 				}
 				value = gatorEnvironmentCombo->getTVOC();
