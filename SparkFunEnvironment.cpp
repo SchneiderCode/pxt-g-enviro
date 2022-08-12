@@ -243,7 +243,7 @@ void environment::begin()
 	//Added from issue 6
 	// Without a delay here, the CCS811 and I2C can be put in a bad state.
 	// Seems to work with 50us delay, but make a bit longer to be sure.
-	
+	fiber_sleep(100);
 	setDriveMode(1); //Read every second	
 }
 
